@@ -1,8 +1,8 @@
 <cfscript>
 if (IsDefined('form.Save')) {
-	new com.Hello().Save(form)
+	new Hello().Save(form)
 }
-Hello = new com.Hello().Where()
+Hello = new Hello().Where()
 </cfscript>
 
 <cfoutput>
@@ -28,7 +28,11 @@ Hello = new com.Hello().Where()
 		</cfloop>
 	</tbody>
 </table>
+<input id="HelloName" autofocus>
+<br>
+<textarea id="HelloDesc"></textarea>
 <button id="Save" type="button">Publish</button>
+<button id="Sample">Sample</button>
 <cfinclude template="/Inc/foot.cfm">
 <script src="Index.js"></script>
 <cfinclude template="/Inc/End.cfm">
